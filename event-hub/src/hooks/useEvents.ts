@@ -7,6 +7,8 @@ export interface MusicEvent {
     id: number;
     name: string;
     artist: string;
+    date: string;
+    city: string;
   }
 
 const useEvents = () => {
