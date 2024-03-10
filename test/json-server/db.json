@@ -1,0 +1,15 @@
+{
+  "events": [
+    {"id": "1", "name": "Historical Tales", "artist": "Mathame", "date": "2023.08.01" },
+    {"id": "2", "name": "Bonus Festival 2023", "artist": "Yotto", "date": "2023.10.01" },
+    {"id": "3", "name": "Anjunadeep openAir", "artist": "Marsh", "date": "2023.09.01" },
+    {"id": "4", "name": "Anjunadeep openAir", "artist": "16BL", "date": "2023.09.01" }
+  ],
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
