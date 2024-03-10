@@ -1,12 +1,12 @@
 {
   "events": [
-    {"id": "1", "name": "Historical Tales", "artist": "Mathame", "date": "2023.07.17" },
-    {"id": "2", "name": "Bónusz Festival 2023", "artist": "Yotto", "date": "2023.10.13" },
-    {"id": "3", "name": "Anjunadeep Open Air Budapest", "artist": "Marsh", "date": "2023.09.02" },
-    {"id": "4", "name": "Anjunadeep Open Air Budapest", "artist": "16BL", "date": "2023.09.02" },
-    {"id": "5", "name": "TINLICKER - In Another Lifetime album tour", "artist": "Tinlicker", "date": "2024.03.13" },
-    {"id": "6", "name": "Bónusz Festival 2023", "artist": "HERNAN CATTANEO", "date": "2023.10.13" },
-    {"id": "7", "name": "Bónusz Festival 2023", "artist": "WORAKLS ORCHESTRA", "date": "2023.10.13" }
+    {"id": "1", "name": "Historical Tales", "artist": "Mathame", "date": "2023.07.17", "city": "Budapest" },
+    {"id": "2", "name": "Bónusz Festival 2023", "artist": "Yotto", "date": "2023.10.13", "city": "Budapest" },
+    {"id": "3", "name": "Anjunadeep Open Air Budapest", "artist": "Marsh", "date": "2023.09.02", "city": "Budapest" },
+    {"id": "4", "name": "Anjunadeep Open Air Budapest", "artist": "16BL", "date": "2023.09.02", "city": "Budapest" },
+    {"id": "5", "name": "TINLICKER - In Another Lifetime album tour", "artist": "Tinlicker", "date": "2024.03.13", "city": "Budapest" },
+    {"id": "6", "name": "Bónusz Festival 2023", "artist": "HERNAN CATTANEO", "date": "2023.10.13", "city": "Budapest" },
+    {"id": "7", "name": "Bónusz Festival 2023", "artist": "WORAKLS ORCHESTRA", "date": "2023.10.13", "city": "Budapest" }
 
   ],
   "posts": [
