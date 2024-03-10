@@ -2,7 +2,8 @@ import { CanceledError } from "axios";
 import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
 
-interface MusicEvent {
+// export it , so it can be used in the EventCard component for example
+export interface MusicEvent {
     id: number;
     name: string;
     artist: string;
