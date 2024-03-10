@@ -1,35 +1,8 @@
 import { Text } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-import apiClient from "../services/api-client";
-
-interface MusicEvent {
-  id: number;
-  name: string;
-  artist: string;
-}
+import useEvents from "../hooks/useEvents";
 
 const EventGrid = () => {
-  const [musicevents, setMusicEvent] = useState<MusicEvent[]>([]);
-  const [error, setError] = useState([]);
-
-  // Fetch data:
-  //useEffect(() => {
-  //  fetch("http://localhost:3000/events")
-  //    .then((response) => response.json())
-  //    .then((json) => console.log(json));
-  //});
-
-  //this usEffect runs only once when the component mounts
-  useEffect(() => {
-    apiClient
-      .get("/events")
-      .then((res) => {
-        setMusicEvent(res.data);
-        console.log(res);
-      })
-      .catch((error) => setError(error.message));
-  }, []);
-
+  const { musicevents, error } = useEvents();
   return (
     <>
       {error && <Text>{error}</Text>}
