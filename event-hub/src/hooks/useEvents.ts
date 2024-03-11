@@ -14,6 +14,7 @@ export interface MusicEvent {
 const useEvents = () => {
     const [musicevents, setMusicEvent] = useState<MusicEvent[]>([]);
     const [error, setError] = useState([]);
+    const [isLoading, setLoading] = useState(false) ;
 
     // Fetch data:
     //useEffect(() => {
@@ -27,6 +28,7 @@ const useEvents = () => {
     useEffect(() => {
       const controller = new AbortController();
 
+      setLoading (true);
       apiClient
         .get("/events", {signal: controller.signal})
         .then((res) => {
@@ -36,12 +38,13 @@ const useEvents = () => {
         .catch((err) => {
             if (err instanceof CanceledError) return;
             setError(err.message)
-        });
+        })
+        .finally(() => {setLoading(false)});
 
       return () => controller.abort()
     }, []);
 
-    return {musicevents, error}
+    return {musicevents, error, isLoading}
 
 }
 
