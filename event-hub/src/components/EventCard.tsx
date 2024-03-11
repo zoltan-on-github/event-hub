@@ -15,7 +15,7 @@ interface Props {
 
 const EventCard = ({ musicEvent }: Props) => {
   return (
-    <Card width="250px" borderRadius={10} overflow="hidden">
+    <Card>
       <Image fallbackSrc="vite.svg" />
       <CardBody>
         <Heading fontSize="2xl">

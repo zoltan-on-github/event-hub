@@ -1,6 +1,7 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
 import useEvents, { MusicEvent } from "../hooks/useEvents";
 import EventCard from "./EventCard";
+import EventCardContainer from "./EventCardContainer";
 import EventCardSkeleton from "./EventCardSkeleton";
 
 const EventGrid = () => {
@@ -16,9 +17,15 @@ const EventGrid = () => {
         spacing={10}
       >
         {isLoading &&
-          skeletons.map((skeleton) => <EventCardSkeleton key={skeleton} />)}
+          skeletons.map((skeleton) => (
+            <EventCardContainer>
+              <EventCardSkeleton key={skeleton} />
+            </EventCardContainer>
+          ))}
         {musicevents.map((musicevent: MusicEvent) => (
-          <EventCard key={musicevent.id} musicEvent={musicevent} />
+          <EventCardContainer>
+            <EventCard key={musicevent.id} musicEvent={musicevent} />
+          </EventCardContainer>
         ))}
       </SimpleGrid>
     </>
