@@ -18,12 +18,12 @@ const EventGrid = () => {
       >
         {isLoading &&
           skeletons.map((skeleton) => (
-            <EventCardContainer>
+            <EventCardContainer key={skeleton}>
               <EventCardSkeleton key={skeleton} />
             </EventCardContainer>
           ))}
         {musicevents.map((musicevent: MusicEvent) => (
-          <EventCardContainer>
+          <EventCardContainer key={musicevent.id}>
             <EventCard key={musicevent.id} musicEvent={musicevent} />
           </EventCardContainer>
         ))}
