@@ -1,1 +1,4 @@
 test/json-server/images
+stuff/
+
+.DS_Store

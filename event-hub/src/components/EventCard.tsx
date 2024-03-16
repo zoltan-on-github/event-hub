@@ -16,11 +16,14 @@ interface Props {
 const EventCard = ({ musicEvent }: Props) => {
   return (
     <Card>
-      <Image fallbackSrc="vite.svg" />
+      <Image
+        src={musicEvent.img_url}
+        //fallbackStrategy="onError"
+        fallbackSrc="vite.svg"
+      />
       <CardBody>
-        <Heading fontSize="2xl">
-          {musicEvent.name} - {musicEvent.artist}
-        </Heading>
+        <Heading fontSize="2xl">{musicEvent.artist}</Heading>
+        <Heading fontSize="1xl">{musicEvent.name}</Heading>
         <HStack
           padding="10px"
           justifyContent={"flex-end"}

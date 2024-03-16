@@ -9,6 +9,7 @@ export interface MusicEvent {
     artist: string;
     date: string;
     city: string;
+    img_url: string;
   }
 
 const useEvents = () => {
