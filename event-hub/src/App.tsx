@@ -3,6 +3,7 @@ import { Button, ButtonGroup, Show } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import EventGrid from "./components/EventGrid";
+import SideBar from "./components/SideBar";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
       </GridItem>
       <Show above="lg">
         {" "}
-        <GridItem area="aside">Aside</GridItem>
+        <GridItem area="aside">
+          <SideBar />
+        </GridItem>
       </Show>
       <GridItem area="main">
         <EventGrid />
