@@ -20,6 +20,7 @@ const EventCard = ({ musicEvent }: Props) => {
         src={musicEvent.img_url}
         //fallbackStrategy="onError"
         fallbackSrc="vite.svg"
+        //boxSize="250px" // it could work , if the image aspect ratios are normalized
       />
       <CardBody>
         <Heading fontSize="2xl">{musicEvent.artist}</Heading>
