@@ -12,6 +12,16 @@ export interface MusicEvent {
     img_url: string;
   }
 
+const artists: Set<string> = new Set<string>();
+
+function collect_artists(musicevents: MusicEvent[])
+{
+  console.log('collect_artists function called')
+  musicevents.forEach(musicevent => {
+    artists.add(musicevent.artist)
+  });
+}
+
 const useEvents = () => {
     const [musicevents, setMusicEvent] = useState<MusicEvent[]>([]);
     const [error, setError] = useState([]);
@@ -45,7 +55,8 @@ const useEvents = () => {
       return () => controller.abort()
     }, []);
 
-    return {musicevents, error, isLoading}
+    collect_artists(musicevents)
+    return {musicevents, error, isLoading, artists}
 
 }
 
