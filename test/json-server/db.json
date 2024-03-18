@@ -5,8 +5,8 @@
     {"id": "3", "name": "Anjunadeep Open Air Budapest", "artist": "Marsh", "date": "2023.09.02", "city": "Budapest", "img_url": "https://i.imgur.com/nljfFbA.jpeg" },
     {"id": "4", "name": "Anjunadeep Open Air Budapest", "artist": "16BL", "date": "2023.09.02", "city": "Budapest", "img_url": "https://i.imgur.com/nljfFbA.jpeg" },
     {"id": "5", "name": "TINLICKER - In Another Lifetime album tour", "artist": "Tinlicker", "date": "2024.03.13", "city": "Budapest", "img_url": "https://i.imgur.com/rdmfk8N.png"},
-    {"id": "6", "name": "Bónusz Festival 2023", "artist": "HERNAN CATTANEO", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg"  },
-    {"id": "7", "name": "Bónusz Festival 2023", "artist": "WORAKLS ORCHESTRA", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg" }
+    {"id": "6", "name": "Bónusz Festival 2023", "artist": "Hernan Cattaneo", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg"  },
+    {"id": "7", "name": "Bónusz Festival 2023", "artist": "Worakls Orchestra", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg" }
 
   ],
   "posts": [
