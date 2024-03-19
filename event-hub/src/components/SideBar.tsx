@@ -3,10 +3,12 @@ import useEvents from "../hooks/useEvents";
 
 const SideBar = () => {
   const { artists } = useEvents();
+  let artist_array = Array.from(artists);
+  artist_array.sort((a, b) => a.localeCompare(b));
 
   return (
     <VStack align="left" paddingTop="50px" paddingLeft="10px">
-      {Array.from(artists).map((artist, index) => (
+      {artist_array.map((artist, index) => (
         <Text as="b" align="left" key={index}>
           {artist}
         </Text>
