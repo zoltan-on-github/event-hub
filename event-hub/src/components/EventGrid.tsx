@@ -4,8 +4,12 @@ import EventCard from "./EventCard";
 import EventCardContainer from "./EventCardContainer";
 import EventCardSkeleton from "./EventCardSkeleton";
 
-const EventGrid = () => {
-  const { musicevents, error, isLoading } = useEvents();
+interface Props {
+  selectedArtist: string | null;
+}
+
+const EventGrid = ({ selectedArtist }: Props) => {
+  const { musicevents, error, isLoading } = useEvents(selectedArtist);
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (

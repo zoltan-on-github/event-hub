@@ -1,11 +1,13 @@
 import "./App.css";
-import { Button, ButtonGroup, Show } from "@chakra-ui/react";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import EventGrid from "./components/EventGrid";
 import SideBar from "./components/SideBar";
+import { useState } from "react";
 
 function App() {
+  const [selectedArtist, setSelectedArtist] = useState<string | null>(null);
+
   return (
     <Grid
       templateAreas={{
@@ -16,14 +18,16 @@ function App() {
       <GridItem area="nav">
         <NavBar></NavBar>
       </GridItem>
+
       <Show above="lg">
         {" "}
         <GridItem area="aside">
-          <SideBar />
+          <SideBar onSelectArtist={(artist) => setSelectedArtist(artist)} />
         </GridItem>
       </Show>
+
       <GridItem area="main">
-        <EventGrid />
+        <EventGrid selectedArtist={selectedArtist} />
       </GridItem>
     </Grid>
   );
