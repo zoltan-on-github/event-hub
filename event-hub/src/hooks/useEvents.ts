@@ -4,7 +4,6 @@ import apiClient from "../services/api-client";
 
 // export it , so it can be used in the EventCard component for example
 export interface MusicEvent {
-    id: number;
     name: string;
     artist: string;
     date: string;

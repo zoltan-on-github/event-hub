@@ -26,9 +26,9 @@ const EventGrid = ({ selectedArtist }: Props) => {
               <EventCardSkeleton key={skeleton} />
             </EventCardContainer>
           ))}
-        {musicevents.map((musicevent: MusicEvent) => (
-          <EventCardContainer key={musicevent.id}>
-            <EventCard key={musicevent.id} musicEvent={musicevent} />
+        {musicevents.map((musicevent: MusicEvent, index) => (
+          <EventCardContainer key={index}>
+            <EventCard key={index} musicEvent={musicevent} />
           </EventCardContainer>
         ))}
       </SimpleGrid>
