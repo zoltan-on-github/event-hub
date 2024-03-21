@@ -1,15 +1,15 @@
 {
   "events": [
-    {"id": "1", "name": "Historical Tales", "artist": "Mathame", "date": "2023.07.17", "city": "Budapest", "img_url": "https://i.imgur.com/K3OwzqT.jpeg" },
-    {"id": "2", "name": "Bónusz Festival 2023", "artist": "Yotto", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg" },
-    {"id": "3", "name": "Anjunadeep Open Air Budapest", "artist": "Marsh", "date": "2023.09.02", "city": "Budapest", "img_url": "https://i.imgur.com/nljfFbA.jpeg" },
-    {"id": "4", "name": "Anjunadeep Open Air Budapest", "artist": "16BL", "date": "2023.09.02", "city": "Budapest", "img_url": "https://i.imgur.com/nljfFbA.jpeg" },
-    {"id": "5", "name": "TINLICKER - In Another Lifetime album tour", "artist": "Tinlicker", "date": "2024.03.13", "city": "Budapest", "img_url": "https://i.imgur.com/rdmfk8N.png"},
-    {"id": "6", "name": "Bónusz Festival 2023", "artist": "Hernan Cattaneo", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg"  },
-    {"id": "7", "name": "Bónusz Festival 2023", "artist": "Worakls Orchestra", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg" },
-    {"id": "8", "name": "The Project: Unity Pre-NYE", "artist": "Yubik", "date": "2023.12.13", "city": "Budapest", "img_url": "https://i.imgur.com/XsDVqSk.jpg" },
-    {"id": "9", "name": "The Project: Unity Pre-NYE", "artist": "ANII", "date": "2023.12.13", "city": "Budapest", "img_url": "https://i.imgur.com/XsDVqSk.jpg" },
-    {"id": "10", "name": "The Project: Unity Pre-NYE", "artist": "Goom Gum", "date": "2023.12.13", "city": "Budapest", "img_url": "https://i.imgur.com/XsDVqSk.jpg" }
+    {"name": "Historical Tales", "artist": "Mathame", "date": "2023.07.17", "city": "Budapest", "img_url": "https://i.imgur.com/K3OwzqT.jpeg" },
+    {"name": "Bónusz Festival 2023", "artist": "Yotto", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg" },
+    {"name": "Anjunadeep Open Air Budapest", "artist": "Marsh", "date": "2023.09.02", "city": "Budapest", "img_url": "https://i.imgur.com/nljfFbA.jpeg" },
+    {"name": "Anjunadeep Open Air Budapest", "artist": "16BL", "date": "2023.09.02", "city": "Budapest", "img_url": "https://i.imgur.com/nljfFbA.jpeg" },
+    {"name": "TINLICKER - In Another Lifetime album tour", "artist": "Tinlicker", "date": "2024.03.13", "city": "Budapest", "img_url": "https://i.imgur.com/rdmfk8N.png"},
+    {"name": "Bónusz Festival 2023", "artist": "Hernan Cattaneo", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg"  },
+    {"name": "Bónusz Festival 2023", "artist": "Worakls Orchestra", "date": "2023.10.13", "city": "Budapest", "img_url": "https://i.imgur.com/Bzjbr4G.jpeg" },
+    {"name": "The Project: Unity Pre-NYE", "artist": "Yubik", "date": "2023.12.13", "city": "Budapest", "img_url": "https://i.imgur.com/XsDVqSk.jpg" },
+    {"name": "The Project: Unity Pre-NYE", "artist": "ANII", "date": "2023.12.13", "city": "Budapest", "img_url": "https://i.imgur.com/XsDVqSk.jpg" },
+    {"name": "The Project: Unity Pre-NYE", "artist": "Goom Gum", "date": "2023.12.13", "city": "Budapest", "img_url": "https://i.imgur.com/XsDVqSk.jpg" }
   ],
   "posts": [
     { "id": 1, "title": "json-server", "author": "typicode" }
