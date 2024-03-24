@@ -22,7 +22,10 @@ function App() {
       <Show above="lg">
         {" "}
         <GridItem area="aside">
-          <SideBar onSelectArtist={(artist) => setSelectedArtist(artist)} />
+          <SideBar
+            onSelectArtist={(artist) => setSelectedArtist(artist)}
+            selectedArtist={selectedArtist}
+          />
         </GridItem>
       </Show>
 

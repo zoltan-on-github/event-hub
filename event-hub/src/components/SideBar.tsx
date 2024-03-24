@@ -3,9 +3,10 @@ import useEvents from "../hooks/useEvents";
 
 interface Props {
   onSelectArtist: (artist: string) => void;
+  selectedArtist: string | null;
 }
 
-const SideBar = ({ onSelectArtist }: Props) => {
+const SideBar = ({ onSelectArtist, selectedArtist }: Props) => {
   const { artists } = useEvents(null);
   let artist_array = Array.from(artists);
   artist_array.sort((a, b) => a.localeCompare(b));
@@ -18,6 +19,7 @@ const SideBar = ({ onSelectArtist }: Props) => {
           as="b"
           variant="link"
           key={index}
+          fontWeight={selectedArtist === artist ? "bold" : "normal"}
         >
           {artist}
         </Button>
