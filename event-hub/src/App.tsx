@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import EventGrid from "./components/EventGrid";
 import SideBar from "./components/SideBar";
 import { useState } from "react";
+import { LocationSelector } from "./components/LocationSelector";
 
 function App() {
   const [selectedArtist, setSelectedArtist] = useState<string | null>(null);
@@ -30,6 +31,7 @@ function App() {
       </Show>
 
       <GridItem area="main">
+        <LocationSelector />
         <EventGrid selectedArtist={selectedArtist} />
       </GridItem>
     </Grid>
