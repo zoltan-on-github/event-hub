@@ -8,6 +8,7 @@ import { LocationSelector } from "./components/LocationSelector";
 
 function App() {
   const [selectedArtist, setSelectedArtist] = useState<string | null>(null);
+  const [selectedCity, setSelectedLocation] = useState<string | null>(null);
 
   return (
     <Grid
@@ -31,8 +32,14 @@ function App() {
       </Show>
 
       <GridItem area="main">
-        <LocationSelector />
-        <EventGrid selectedArtist={selectedArtist} />
+        <LocationSelector
+          onSelectLocation={(city) => setSelectedLocation(city)}
+          selectedCity={selectedCity}
+        />
+        <EventGrid
+          selectedCity={selectedCity}
+          selectedArtist={selectedArtist}
+        />
       </GridItem>
     </Grid>
   );

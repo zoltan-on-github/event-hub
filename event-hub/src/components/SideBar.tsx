@@ -7,7 +7,7 @@ interface Props {
 }
 
 const SideBar = ({ onSelectArtist, selectedArtist }: Props) => {
-  const { artists } = useEvents(null);
+  const { artists } = useEvents(null, null);
   let artist_array = Array.from(artists);
   artist_array.sort((a, b) => a.localeCompare(b));
 

@@ -21,7 +21,7 @@ function collect_artists(musicevents: MusicEvent[])
   });
 }
 
-const useEvents = ( selectedArtist: string | null) => {
+const useEvents = ( selectedArtist: string | null, selectedCity: string | null) => {
     const [musicevents, setMusicEvent] = useState<MusicEvent[]>([]);
     const [error, setError] = useState([]);
     const [isLoading, setLoading] = useState(false) ;
@@ -34,7 +34,7 @@ const useEvents = ( selectedArtist: string | null) => {
     //});
 
     // rerequest the events each time , there is a change in the artist value
-    const deps: any[] = [selectedArtist];
+    const deps: any[] = [selectedArtist,selectedCity];
 
     //this usEffect runs only once when the component mounts
     useEffect(() => {
@@ -45,7 +45,7 @@ const useEvents = ( selectedArtist: string | null) => {
       // AxiosRequestConfig object is updated with query string
       // e.g.: 'http://localhost:3000/events?artist=Tinlicker'
       apiClient
-        .get("/events", {signal: controller.signal, params: {artist: selectedArtist} })
+        .get("/events", {signal: controller.signal, params: {artist: selectedArtist, city: selectedCity} })
         .then((res) => {
           setMusicEvent(res.data);
           //console.log(res);

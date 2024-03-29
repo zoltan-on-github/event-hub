@@ -6,10 +6,14 @@ import EventCardSkeleton from "./EventCardSkeleton";
 
 interface Props {
   selectedArtist: string | null;
+  selectedCity: string | null;
 }
 
-const EventGrid = ({ selectedArtist }: Props) => {
-  const { musicevents, error, isLoading } = useEvents(selectedArtist);
+const EventGrid = ({ selectedArtist, selectedCity }: Props) => {
+  const { musicevents, error, isLoading } = useEvents(
+    selectedArtist,
+    selectedCity
+  );
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (

@@ -6,12 +6,15 @@ import {
   MenuItem,
   MenuGroup,
 } from "@chakra-ui/react";
-
 import { BsChevronDown } from "react-icons/bs";
-
 import useLocations, { eventLocation } from "../hooks/useLocations";
 
-export const LocationSelector = () => {
+interface Props {
+  onSelectLocation: (city: string) => void;
+  selectedCity: string | null;
+}
+
+export const LocationSelector = ({ onSelectLocation, selectedCity }: Props) => {
   const { locations, error } = useLocations();
 
   //console.log(error);
@@ -20,7 +23,7 @@ export const LocationSelector = () => {
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        Locations
+        {selectedCity || "Locations"}
       </MenuButton>
 
       <MenuList>
@@ -28,7 +31,12 @@ export const LocationSelector = () => {
           {locations.map((location: eventLocation, countryIndex) => (
             <MenuGroup title={location.country} key={countryIndex}>
               {location.cities.map((city: string, cityIndex) => (
-                <MenuItem key={cityIndex}>{city}</MenuItem>
+                <MenuItem
+                  onClick={() => onSelectLocation(city)}
+                  key={cityIndex}
+                >
+                  {city}
+                </MenuItem>
               ))}
             </MenuGroup>
           ))}
