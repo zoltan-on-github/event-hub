@@ -5,6 +5,8 @@ import {
   MenuList,
   MenuItem,
   MenuGroup,
+  HStack,
+  MenuDivider,
 } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
 import useLocations, { eventLocation } from "../hooks/useLocations";
@@ -21,27 +23,38 @@ export const LocationSelector = ({ onSelectLocation, selectedCity }: Props) => {
   //if (error) return null;
 
   return (
-    <Menu>
-      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        {selectedCity || "Locations"}
-      </MenuButton>
+    <HStack paddingLeft="40px" fontSize="small">
+      <Menu>
+        <MenuButton
+          fontSize="inherit"
+          as={Button}
+          rightIcon={<BsChevronDown />}
+        >
+          {selectedCity || "Locations"}
+        </MenuButton>
 
-      <MenuList>
-        <>
-          {locations.map((location: eventLocation, countryIndex) => (
-            <MenuGroup title={location.country} key={countryIndex}>
-              {location.cities.map((city: string, cityIndex) => (
-                <MenuItem
-                  onClick={() => onSelectLocation(city)}
-                  key={cityIndex}
-                >
-                  {city}
-                </MenuItem>
-              ))}
-            </MenuGroup>
-          ))}
-        </>
-      </MenuList>
-    </Menu>
+        <MenuList>
+          <>
+            {locations.map((location: eventLocation, countryIndex) => (
+              <MenuGroup
+                title={location.country}
+                key={countryIndex}
+                fontSize="inherit"
+              >
+                <MenuDivider />
+                {location.cities.map((city: string, cityIndex) => (
+                  <MenuItem
+                    onClick={() => onSelectLocation(city)}
+                    key={cityIndex}
+                  >
+                    {city}
+                  </MenuItem>
+                ))}
+              </MenuGroup>
+            ))}
+          </>
+        </MenuList>
+      </Menu>
+    </HStack>
   );
 };
