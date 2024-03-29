@@ -1,4 +1,4 @@
-import { Button, VStack } from "@chakra-ui/react";
+import { Stack, Link } from "@chakra-ui/react";
 import useEvents from "../hooks/useEvents";
 
 interface Props {
@@ -12,19 +12,18 @@ const SideBar = ({ onSelectArtist, selectedArtist }: Props) => {
   artist_array.sort((a, b) => a.localeCompare(b));
 
   return (
-    <VStack align="left" paddingTop="50px" paddingLeft="10px">
+    <Stack paddingTop="50px" paddingLeft="10px">
       {artist_array.map((artist, index) => (
-        <Button
+        <Link
           onClick={() => onSelectArtist(artist)}
-          as="b"
-          variant="link"
+          textAlign="left"
           key={index}
           fontWeight={selectedArtist === artist ? "bold" : "normal"}
         >
           {artist}
-        </Button>
+        </Link>
       ))}
-    </VStack>
+    </Stack>
   );
 };
 
